@@ -49,6 +49,22 @@
       </div>
     </div>
 
+    <div class="overlay">
+      <div class="button reset bg-green">Ván mới</div>
+      <div class="winInput">
+        <label for="checkWin"> Nhập số đã kinh, cách nhau bằng dấu ',' </label>
+        <input type="text" id="checkWin" />
+        <span class="checkText"></span>
+        <!-- HTML !-->
+
+        <div class="win-button">
+          <button id="checkWinBtn" class="button-19" role="button">
+            Kiểm tra
+          </button>
+        </div>
+      </div>
+    </div>
+
     <audio class="beat" src="./assets/audio/Beat_out.mp3" hidden loop></audio>
     <script
       type="text/javascript"
@@ -68,8 +84,9 @@
       $(document).ready(function () {
         $(".multiple-items").slick({
           infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          arrows: false,
         });
       });
     </script>
