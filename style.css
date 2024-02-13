@@ -1,0 +1,129 @@
+:root {
+  --number: #ffa500;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  overflow-x: hidden;
+  background-color: #eee;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-green {
+  background-color: #52cc49;
+}
+
+.bg-yellow {
+  background-color: darkorange;
+}
+
+.button {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:active {
+  transform: translateY(-3px);
+}
+
+.container {
+  max-width: 600px;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  background-image: url(./assets/img/logo.svg);
+  width: 50%;
+  background-size: cover;
+  height: 0;
+  padding: 0; /* reset */
+  padding-bottom: 40%;
+}
+
+.number {
+  background-color: #3498db;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 100px;
+  margin: 10px;
+  padding: 15px;
+  position: relative;
+  text-align: center;
+
+  border-radius: 10%;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 8px var(--number), inset 0 0 8px var(--number);
+  }
+  50% {
+    box-shadow: 0 0 16px var(--number), inset 0 0 14px var(--number);
+  }
+  100% {
+    box-shadow: 0 0 8px var(--number), inset 0 0 8px var(--number);
+  }
+}
+
+.number-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.inner {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--number), inset 0 0 8px var(--number);
+  -webkit-animation: pulse 2s linear 1s infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner p {
+  display: block;
+  line-height: 100px;
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 56px;
+  color: var(--number);
+  text-shadow: 0 0 4px var(--number);
+}
+
+@media screen and (min-width: 576px) {
+  .number {
+    border-radius: 8%;
+  }
+}

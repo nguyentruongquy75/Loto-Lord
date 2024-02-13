@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loto Lỏd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap/css/bootstrap-grid.min.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo-container">
+        <div class="logo"></div>
+      </div>
+
+      <div class="multiple-items"></div>
+
+      <div class="number-container">
+        <div class="inner">
+          <p class="numberDiv">...</p>
+        </div>
+      </div>
+
+      <div class="control">
+        <div class="button start bg-green">Bắt đầu</div>
+        <div class="button stop bg-red">Dừng</div>
+        <div class="button win bg-yellow">Kinh</div>
+      </div>
+    </div>
+
+    <audio class="beat" src="./assets/audio/Beat_out.mp3" hidden loop></audio>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./main.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".multiple-items").slick({
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        });
+      });
+    </script>
+  </body>
+</html>
